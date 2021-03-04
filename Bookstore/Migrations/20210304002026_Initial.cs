@@ -13,7 +13,9 @@ namespace Bookstore.Migrations
                     BookID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: false),
-                    Author = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: false),
+                    MiddleName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
                     Publisher = table.Column<string>(nullable: false),
                     ISBN = table.Column<string>(nullable: false),
                     Classification = table.Column<string>(nullable: false),

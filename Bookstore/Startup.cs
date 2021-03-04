@@ -59,10 +59,24 @@ namespace Bookstore
             //setting end points and changing the URL use and output
             app.UseEndpoints(endpoints =>
             {
+                //creating new endpoint paths for the page and category
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "/{page:int}",
+                    new { Controller = "Home", action = "Index"});
+
+                endpoints.MapControllerRoute("category",
+                  "{category}",
+                  new { Controller = "Home", action = "Index", page = 1});
+
                 endpoints.MapControllerRoute(
                     "pagination",
-                    "Books/P{page}",
+                    "/P{page}",
                     new { Controller = "Home", action = "Index" });
+
                 endpoints.MapDefaultControllerRoute();
             });
 

@@ -15,7 +15,9 @@
         <thead class="font-weight-bold">
             <tr>
                 <th>Title</th>
-                <th>Author</th>
+                <th>Author First Name</th>
+                <th>Author Middle Name</th>
+                <th>Author Last Name</th>
                 <th>Publisher</th>
                 <th>ISBN</th>
                 <th>Classification</th>
@@ -27,21 +29,14 @@
         <tbody class="text-danger">
             @foreach (var x in Model.Books)
             {
-                <tr>
-                    <td>@x.Title</td>
-                    <td>@x.Author</td>
-                    <td>@x.Publisher</td>
-                    <td>@x.ISBN</td>
-                    <td>@x.Classification</td>
-                    <td>@x.Category</td>
-                    <td>$@x.Price</td>
-                    <td>@x.Pages</td>
-                </tr>
+                //creating a partial view to display by category if wanted
+               <partial name="BookCategory" model="x" />
             }
         </tbody>
     </table>
 </div>
 <div page-model="@Model.PagingInfo" page-action="Index" page-class-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory" 
+     class="btn-group pull-right m-1"></div>
 

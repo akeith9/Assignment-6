@@ -10,6 +10,8 @@ namespace Bookstore.Models.ViewModels
         //building view model
         public IEnumerable<Books> Books { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
+
 
     }
 }
