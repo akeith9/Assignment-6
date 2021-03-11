@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+
+<!--creating a html page to display the menu navigation-->
+
+<a class="btn btn-outline-secondary" asp-action="Index" asp-controller="Home"
+   asp-route-category="">
+    Home
+</a>
+
+@foreach (string category in Model)
+{
+    <a class="btn
+              @(category == ViewBag.SelectedCategory ? "btn-primary" : "btn-outline-secondary")"
+       asp-action="Index" asp-controller="Home"
+       asp-route-category="@category"
+       asp-route-page="1">
+        @category
+    </a>
+}

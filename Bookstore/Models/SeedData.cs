@@ -43,7 +43,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "Team of Rivals",
-                        Author = "Doris Kearns Goodwin",
+                        FirstName = "Doris",
+                        MiddleName = "Kearns",
+                        LastName = "Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
@@ -55,7 +57,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "The Snowball",
-                        Author = "Alice Schroeder",
+                        FirstName = "Alice",
+                        MiddleName = "",
+                        LastName = "Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
@@ -67,7 +71,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "American Ulysses",
-                        Author = "Ronald C. White",
+                        FirstName = "Ronald",
+                        MiddleName = "C.",
+                        LastName = "White",
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
@@ -79,7 +85,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "Unbroken",
-                        Author = "Laura Hillenbrand",
+                        FirstName = "Laura",
+                        MiddleName = "",
+                        LastName = "Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
@@ -91,7 +99,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "The Great Train Robbery",
-                        Author = "Michael Crichton",
+                        FirstName = "Michael",
+                        MiddleName = "",
+                        LastName = "Crichton",
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
@@ -103,7 +113,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "Deep Work",
-                        Author = "Cal Newport",
+                        FirstName = "Cal",
+                        MiddleName = "",
+                        LastName = "Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
@@ -115,7 +127,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "It's Your Ship",
-                        Author = "Michael Abrashoff",
+                        FirstName = "Michael",
+                        MiddleName = "",
+                        LastName = "Abrashoff",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
@@ -127,7 +141,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "The Virgin Way",
-                        Author = "Richard Branson",
+                        FirstName = "Richard",
+                        MiddleName = "",
+                        LastName = "Branson",
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
@@ -153,7 +169,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "The Hobbit",
-                        Author = "J.R.R Tolkien",
+                        FirstName = "J.R.R.",
+                        MiddleName = "",
+                        LastName = "Tolkien",
                         Publisher = "HMH Books",
                         ISBN = "978-0547928227",
                         Classification = "Fiction",
@@ -165,7 +183,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "Harry Potter and the Deathly Hallows",
-                        Author = "J.K. Rowling",
+                        FirstName = "J.K.",
+                        MiddleName = "",
+                        LastName = "Rowling",
                         Publisher = "Arthur A. Levine Books",
                         ISBN = "978-0545139700",
                         Classification = "Fiction",
@@ -177,7 +197,9 @@ namespace Bookstore.Models
                     new Books
                     {
                         Title = "How to Win Friends and Influence People",
-                        Author = "Dale Carnegie",
+                        FirstName = "Dale",
+                        MiddleName = "",
+                        LastName = "Carnegie",
                         Publisher = "Pocket Books",
                         ISBN = "978-0671027032",
                         Classification = "Non-Fiction",
