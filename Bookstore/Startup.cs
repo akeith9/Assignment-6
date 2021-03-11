@@ -1,6 +1,7 @@
 using Bookstore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -34,6 +35,14 @@ namespace Bookstore
             });
 
             services.AddScoped<BooksRepository, EFBooksRepository>();
+
+            //add in razor page functionality
+            services.AddRazorPages();
+            // services to create cart functionality
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +60,8 @@ namespace Bookstore
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            //to start a cart session for user
+            app.UseSession();
 
             app.UseRouting();
 
@@ -78,6 +89,10 @@ namespace Bookstore
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapDefaultControllerRoute();
+
+                //routing for razor pages
+                endpoints.MapRazorPages();
+
             });
 
             //checks if database is populated
